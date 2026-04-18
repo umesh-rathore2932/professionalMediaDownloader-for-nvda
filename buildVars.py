@@ -11,7 +11,7 @@ addon_info = AddonInfo(
 	addon_url=https://github.com/umesh-rathore2932/professionalMediaDownloader-for-nvda,
 	addon_docFileName="readme.html",
 	addon_minimumNVDAVersion="2021.1",
-	addon_lastTestedNVDAVersion="2026.1",
+	addon_lastTestedNVDAVersion="2025.3.3",
 	addon_updateChannel=None,
 )
 
