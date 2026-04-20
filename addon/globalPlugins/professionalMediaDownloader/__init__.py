@@ -1,6 +1,7 @@
 # Professional Media Downloader
 # Author: Umesh Rathore
-# Description: High-quality media downloader for NVDA
+# Description: High-quality media downloader for NVDA with 1000+ sites support
+# Version: 1.1
 
 import os
 import threading
@@ -15,7 +16,7 @@ log = logHandler.log
 
 class DownloaderDialog(wx.Dialog):
 	def __init__(self, parent):
-		super(DownloaderDialog, self).__init__(parent, title=_("Professional Media Downloader"))
+		super(DownloaderDialog, self).__init__(parent, title=_("Professional Media Downloader v1.1"))
 		
 		self.addon_dir = os.path.dirname(os.path.abspath(__file__))
 		self.appdata_path = os.path.join(os.environ['APPDATA'], 'Media Downloader')
@@ -33,9 +34,9 @@ class DownloaderDialog(wx.Dialog):
 		mainSizer.Add(lbl_url, 0, wx.ALL | wx.EXPAND, 10)
 		mainSizer.Add(self.urlInput, 0, wx.EXPAND | wx.LEFT | wx.RIGHT, 10)
 		
-		# Formats
+		# Formats - Updated for Version 1.1 (Added aac, ogg, opus)
 		lbl_fmt = wx.StaticText(self, label=_("Select &Format:"))
-		formats = ['mp3', 'wav', 'm4a', 'ogg', 'flac', 'mp4', 'mkv', 'webm']
+		formats = ['mp3', 'm4a', 'aac', 'ogg', 'opus', 'wav', 'flac', 'mp4', 'mkv', 'webm']
 		self.formatCombo = wx.ComboBox(self, choices=formats, style=wx.CB_READONLY)
 		self.formatCombo.SetSelection(0)
 		mainSizer.Add(lbl_fmt, 0, wx.ALL, 10)
@@ -73,6 +74,7 @@ class DownloaderDialog(wx.Dialog):
 		threading.Thread(target=self.run_engine, args=(url, fmt), daemon=True).start()
 
 	def run_engine(self, url, fmt):
+		# Note: Ensure yt-dlp.exe and ffmpeg are in the addon folder
 		ytdlp_exe = os.path.join(self.addon_dir, "yt-dlp.exe")
 		ffmpeg_dir = self.addon_dir 
 		
@@ -90,6 +92,7 @@ class DownloaderDialog(wx.Dialog):
 		cmd.append(url)
 
 		try:
+			# CREATE_NO_WINDOW flag used for silent background process
 			proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, creationflags=0x08000000)
 			proc.communicate()
 			wx.CallAfter(self.finish_download, proc.returncode)
@@ -137,6 +140,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if os.path.exists(path): os.startfile(path)
 
 	def onHelp(self, event):
+		# Documentation link
 		doc_path = os.path.join(os.path.dirname(__file__), "..", "..", "doc", "en", "readme.html")
 		if os.path.exists(doc_path): os.startfile(doc_path)
 
@@ -145,7 +149,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.onOpenDialog(None)
 
 	def terminate(self):
-		if self.mainMenuItem:
+		if hasattr(self, 'mainMenuItem') and self.mainMenuItem:
 			try:
 				gui.mainFrame.sysTrayIcon.toolsMenu.Remove(self.mainMenuItem)
 			except: pass
