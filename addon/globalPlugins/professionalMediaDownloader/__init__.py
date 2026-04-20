@@ -3,6 +3,8 @@
 # Description: High-quality media downloader for NVDA with 1000+ sites support
 # Version: 1.1
 
+import addonHandler
+addonHandler.initTranslation()
 import os
 import threading
 import subprocess
