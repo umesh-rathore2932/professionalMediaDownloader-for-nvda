@@ -6,9 +6,10 @@ addon_info = AddonInfo(
 	addon_summary=_("Professional Media Downloader"),
 	addon_description=_("A professional tool to download high-quality audio and video from over 1000 websites."),
 	addon_version="1.10",
-	addon_changelog=_("Initial release."),
+	addon_changelog=_("_Initial release."),
 	addon_author="Umesh Rathore",
-	addon_url=https://github.com/umesh-rathore2932/professionalMediaDownloader-for-nvda,
+	# Yahan quotes lagana zaroori hai
+	addon_url="https://github.com/umesh-rathore2932/professionalMediaDownloader-for-nvda",
 	addon_docFileName="readme.html",
 	addon_minimumNVDAVersion="2021.1",
 	addon_lastTestedNVDAVersion="2025.3.3",
