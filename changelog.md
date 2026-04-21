@@ -1,4 +1,6 @@
 ## Changelog
+### version 2.0
+*added support for Ukrainian localisation.
 ### Version 1.1
 * Added support for more audio formats: AAC, OGG, and OPUS.
 * Officially available on the NVDA Add-on Store.
