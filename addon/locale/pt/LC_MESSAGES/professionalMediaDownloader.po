@@ -1,0 +1,68 @@
+# Portuguese (Português) translations for Professional Media Downloader
+# Copyright (C) 2026 Umesh Rathore
+# This file is distributed under the same license as the Professional Media Downloader package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Professional Media Downloader 2.0\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Professional Media Downloader"
+msgstr "Gerenciador Profissional de Mídia"
+
+msgid "A professional tool to download high-quality audio and video from over 1000 websites."
+msgstr "Uma ferramenta profissional para baixar áudio e vídeo de alta qualidade de mais de 1000 sites."
+
+msgid "Professional Media Downloader v2.0"
+msgstr "Gerenciador Profissional de Mídia v2.0"
+
+msgid "&Enter URL:"
+msgstr "&Digite a URL:"
+
+msgid "Select &Format:"
+msgstr "&Selecione o formato:"
+
+msgid "&Download"
+msgstr "&Baixar"
+
+msgid "&Open Downloads"
+msgstr "&Abrir downloads"
+
+msgid "&Close"
+msgstr "&Fechar"
+
+msgid "Open &Downloads Folder"
+msgstr "&Abrir pasta de downloads"
+
+msgid "&Help"
+msgstr "&Ajuda"
+
+msgid "&Open Downloader"
+msgstr "&Abrir gerenciador"
+
+msgid "Please enter a URL."
+msgstr "Por favor, digite uma URL."
+
+msgid "Error"
+msgstr "Erro"
+
+msgid "Downloading"
+msgstr "Baixando"
+
+msgid "Please wait, processing your request..."
+msgstr "Por favor, aguarde enquanto sua solicitação é processada..."
+
+msgid "Download Completed Successfully!"
+msgstr "Download concluído com sucesso!"
+
+msgid "Finished"
+msgstr "Concluído"
+
+msgid "Download Failed. Check your URL and Internet."
+msgstr "Falha no download. Verifique a URL e a conexão com a Internet."
+
+msgid "Opens the Media Downloader dialog."
+msgstr "Abre a caixa de diálogo do gerenciador de mídia."
