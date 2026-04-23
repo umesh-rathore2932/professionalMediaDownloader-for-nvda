@@ -1,0 +1,68 @@
+# Turkish (Türkçe) translations for Professional Media Downloader
+# Copyright (C) 2026 Umesh Rathore
+# This file is distributed under the same license as the Professional Media Downloader package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Professional Media Downloader 2.0\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Professional Media Downloader"
+msgstr "Profesyonel Medya İndirici"
+
+msgid "A professional tool to download high-quality audio and video from over 1000 websites."
+msgstr "1000'den fazla web sitesinden yüksek kaliteli ses ve video indirmek için profesyonel bir araç."
+
+msgid "Professional Media Downloader v2.0"
+msgstr "Profesyonel Medya İndirici v2.0"
+
+msgid "&Enter URL:"
+msgstr "&URL Girin:"
+
+msgid "Select &Format:"
+msgstr "&Biçim Seçin:"
+
+msgid "&Download"
+msgstr "&İndir"
+
+msgid "&Open Downloads"
+msgstr "&İndirimleri Aç"
+
+msgid "&Close"
+msgstr "&Kapat"
+
+msgid "Open &Downloads Folder"
+msgstr "&İndirimleri Açın Klasörü"
+
+msgid "&Help"
+msgstr "&Yardım"
+
+msgid "&Open Downloader"
+msgstr "&İndiriciyi Aç"
+
+msgid "Please enter a URL."
+msgstr "Lütfen bir URL girin."
+
+msgid "Error"
+msgstr "Hata"
+
+msgid "Downloading"
+msgstr "İndiriliyor"
+
+msgid "Please wait, processing your request..."
+msgstr "Lütfen bekleyin, talebiniz işleniyor..."
+
+msgid "Download Completed Successfully!"
+msgstr "İndirme Başarıyla Tamamlandı!"
+
+msgid "Finished"
+msgstr "Tamamlandı"
+
+msgid "Download Failed. Check your URL and Internet."
+msgstr "İndirme Başarısız. URL'nizi ve İnternet bağlantınızı kontrol edin."
+
+msgid "Opens the Media Downloader dialog."
+msgstr "Medya İndirici iletişim kutusunu açar."
