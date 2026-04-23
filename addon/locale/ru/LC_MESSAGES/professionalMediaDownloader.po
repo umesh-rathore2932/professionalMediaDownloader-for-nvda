@@ -1,0 +1,68 @@
+# Russian (Русский) translations for Professional Media Downloader
+# Copyright (C) 2026 Umesh Rathore
+# This file is distributed under the same license as the Professional Media Downloader package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Professional Media Downloader 2.0\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Professional Media Downloader"
+msgstr "Профессиональный загрузчик медиа"
+
+msgid "A professional tool to download high-quality audio and video from over 1000 websites."
+msgstr "Профессиональный инструмент для загрузки высококачественного аудио и видео более чем с 1000 веб-сайтов."
+
+msgid "Professional Media Downloader v2.0"
+msgstr "Профессиональный загрузчик медиа v2.0"
+
+msgid "&Enter URL:"
+msgstr "&Введите URL:"
+
+msgid "Select &Format:"
+msgstr "&Выберите формат:"
+
+msgid "&Download"
+msgstr "&Загрузить"
+
+msgid "&Open Downloads"
+msgstr "&Открыть загрузки"
+
+msgid "&Close"
+msgstr "&Закрыть"
+
+msgid "Open &Downloads Folder"
+msgstr "&Открыть папку загрузок"
+
+msgid "&Help"
+msgstr "&Справка"
+
+msgid "&Open Downloader"
+msgstr "&Открыть загрузчик"
+
+msgid "Please enter a URL."
+msgstr "Пожалуйста, введите URL."
+
+msgid "Error"
+msgstr "Ошибка"
+
+msgid "Downloading"
+msgstr "Загрузка"
+
+msgid "Please wait, processing your request..."
+msgstr "Пожалуйста, подождите, ваш запрос обрабатывается..."
+
+msgid "Download Completed Successfully!"
+msgstr "Загрузка успешно завершена!"
+
+msgid "Finished"
+msgstr "Завершено"
+
+msgid "Download Failed. Check your URL and Internet."
+msgstr "Загрузка не удалась. Проверьте URL и подключение к Интернету."
+
+msgid "Opens the Media Downloader dialog."
+msgstr "Открывает диалоговое окно загрузчика медиа.",
