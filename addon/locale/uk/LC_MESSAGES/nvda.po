@@ -1,85 +1,64 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"POT-Creation-Date: 2026-04-20 13:24+0300\n"
-"PO-Revision-Date: 2026-04-20 14:57+0300\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"Project-Id-Version: Professional Media Downloader 2.0\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.9\n"
-"X-Poedit-Basepath: globalPlugins\n"
-"X-Poedit-SearchPath-0: .\n"
 
-#: professionalMediaDownloader/__init__.py:18
-#: professionalMediaDownloader/__init__.py:110
-#: professionalMediaDownloader/__init__.py:129
+# Main Menu Items
 msgid "Professional Media Downloader"
 msgstr "Професійний завантажувач медіа"
 
-#: professionalMediaDownloader/__init__.py:31
-msgid "&Enter URL:"
-msgstr "&Введіть URL:"
-
-#: professionalMediaDownloader/__init__.py:37
-msgid "Select &Format:"
-msgstr "Виберіть &формат:"
-
-#: professionalMediaDownloader/__init__.py:46
-msgid "&Download"
-msgstr "&Завантажити"
-
-#: professionalMediaDownloader/__init__.py:50
-msgid "&Open Downloads"
-msgstr "&Відкрити завантаження"
-
-#: professionalMediaDownloader/__init__.py:53
-msgid "&Close"
-msgstr "&Закрити"
-
-#: professionalMediaDownloader/__init__.py:67
-msgid "Please enter a URL."
-msgstr "Будь ласка, введіть URL."
-
-#: professionalMediaDownloader/__init__.py:67
-#: professionalMediaDownloader/__init__.py:107
-msgid "Error"
-msgstr "Помилка"
-
-#: professionalMediaDownloader/__init__.py:70
-msgid "Downloading"
-msgstr "Завантаження"
-
-#: professionalMediaDownloader/__init__.py:70
-msgid "Please wait, processing your request..."
-msgstr "Будь ласка, зачекайте, ваш запит обробляється..."
-
-#: professionalMediaDownloader/__init__.py:104
-msgid "Download Completed Successfully!"
-msgstr "Завантаження успішно завершено!"
-
-#: professionalMediaDownloader/__init__.py:104
-msgid "Finished"
-msgstr "Готово"
-
-#: professionalMediaDownloader/__init__.py:107
-msgid "Download Failed. Check your URL and Internet."
-msgstr "Завантаження не вдалося. Перевірте URL та підключення до Інтернету."
-
-#: professionalMediaDownloader/__init__.py:120
 msgid "&Open Downloader"
 msgstr "&Відкрити завантажувач"
 
-#: professionalMediaDownloader/__init__.py:123
 msgid "Open &Downloads Folder"
 msgstr "Відкрити &папку завантажень"
 
-#: professionalMediaDownloader/__init__.py:126
 msgid "&Help"
 msgstr "&Довідка"
 
-#: professionalMediaDownloader/__init__.py:143
-msgid "Opens the Media Downloader dialog."
-msgstr "Відкриває діалог Медіа-завантажувача."
+# Dialog Strings
+msgid "Professional Media Downloader v1.1"
+msgstr "Професійний завантажувач медіа v2.0"
+
+msgid "&Enter URL:"
+msgstr "&Введіть URL-адресу:"
+
+msgid "Select &Format:"
+msgstr "Виберіть &формат:"
+
+msgid "&Paste from Clipboard"
+msgstr "&Вставити з буфера обміну"
+
+msgid "&Download"
+msgstr "&Завантажити"
+
+msgid "&Close"
+msgstr "&Закрити"
+
+# Status and Messages
+msgid "URL automatically fetched from clipboard"
+msgstr "URL-адресу автоматично отримано з буфера обміну"
+
+msgid "Downloading"
+msgstr "Завантаження"
+
+msgid "Please wait, processing your request..."
+msgstr "Будь ласка, зачекайте, ваш запит обробляється..."
+
+msgid "Download Completed Successfully!"
+msgstr "Завантаження успішно завершено!"
+
+msgid "Finished"
+msgstr "Завершено"
+
+msgid "Error"
+msgstr "Помилка"
+
+msgid "Download Failed. Check your URL and Internet."
+msgstr "Помилка завантаження. Перевірте URL-адресу та підключення до Інтернету."
+
+msgid "Please enter a URL."
+msgstr "Будь ласка, введіть URL-адресу."
