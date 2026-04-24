@@ -1,0 +1,61 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Professional Media Downloader 2.0\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Professional Media Downloader"
+msgstr "प्रोफेशनल मीडिया डाउनलोडर"
+
+msgid "&Open Downloader"
+msgstr "डाउनलोडर खोलें (&O)"
+
+msgid "Open &Downloads Folder"
+msgstr "डाउनलोड फ़ोल्डर खोलें (&D)"
+
+msgid "&Help"
+msgstr "सहायता (&H)"
+
+msgid "Professional Media Downloader v1.1"
+msgstr "प्रोफेशनल मीडिया डाउनलोडर v2.0"
+
+msgid "&Enter URL:"
+msgstr "URL दर्ज करें (&E):"
+
+msgid "Select &Format:"
+msgstr "फॉर्मेट चुनें (&F):"
+
+msgid "&Paste from Clipboard"
+msgstr "क्लिपबोर्ड से पेस्ट करें (&P)"
+
+msgid "&Download"
+msgstr "डाउनलोड करें (&D)"
+
+msgid "&Close"
+msgstr "बंद करें (&C)"
+
+msgid "URL automatically fetched from clipboard"
+msgstr "URL क्लिपबोर्ड से अपने आप ले लिया गया है"
+
+msgid "Downloading"
+msgstr "डाउनलोड हो रहा है"
+
+msgid "Please wait, processing your request..."
+msgstr "कृपया प्रतीक्षा करें, आपकी रिक्वेस्ट पर काम चल रहा है..."
+
+msgid "Download Completed Successfully!"
+msgstr "डाउनलोड सफलतापूर्वक पूरा हुआ!"
+
+msgid "Finished"
+msgstr "समाप्त"
+
+msgid "Error"
+msgstr "त्रुटि"
+
+msgid "Download Failed. Check your URL and Internet."
+msgstr "डाउनलोड विफल रहा। अपना URL और इंटरनेट चेक करें।"
+
+msgid "Please enter a URL."
+msgstr "कृपया URL दर्ज करें।"
