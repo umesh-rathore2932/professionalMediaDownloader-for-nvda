@@ -1,7 +1,7 @@
 # Professional Media Downloader
 # Author: Umesh Rathore
-# Description: High-quality media downloader for NVDA with 1000+ sites support
-# Version: 1.10
+# Version: 2.0
+# Description: High-quality media downloader with Clipboard Auto-fetch and Multi-language support
 
 import addonHandler
 addonHandler.initTranslation()
@@ -12,13 +12,16 @@ import wx
 import gui
 import globalPluginHandler
 import logHandler
+import winsound
+import languageHandler
 from scriptHandler import script
 
 log = logHandler.log
 
 class DownloaderDialog(wx.Dialog):
 	def __init__(self, parent):
-		super(DownloaderDialog, self).__init__(parent, title=_("Professional Media Downloader v1.1"))
+		# Updated title for v2.0
+		super(DownloaderDialog, self).__init__(parent, title=_("Professional Media Downloader v2.0"))
 		
 		self.addon_dir = os.path.dirname(os.path.abspath(__file__))
 		self.appdata_path = os.path.join(os.environ['APPDATA'], 'Media Downloader')
@@ -30,13 +33,18 @@ class DownloaderDialog(wx.Dialog):
 
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
 		
-		# URL Input
+		# URL Input Label
 		lbl_url = wx.StaticText(self, label=_("&Enter URL:"))
 		self.urlInput = wx.TextCtrl(self)
 		mainSizer.Add(lbl_url, 0, wx.ALL | wx.EXPAND, 10)
 		mainSizer.Add(self.urlInput, 0, wx.EXPAND | wx.LEFT | wx.RIGHT, 10)
 		
-		# Formats - Updated for Version 1.1 (Added aac, ogg, opus)
+		# Clipboard Paste Button (New in 2.0)
+		self.pasteBtn = wx.Button(self, label=_("&Paste from Clipboard"))
+		self.pasteBtn.Bind(wx.EVT_BUTTON, self.onPaste)
+		mainSizer.Add(self.pasteBtn, 0, wx.ALL, 10)
+		
+		# Formats
 		lbl_fmt = wx.StaticText(self, label=_("Select &Format:"))
 		formats = ['mp3', 'm4a', 'aac', 'ogg', 'opus', 'wav', 'flac', 'mp4', 'mkv', 'webm']
 		self.formatCombo = wx.ComboBox(self, choices=formats, style=wx.CB_READONLY)
@@ -62,6 +70,28 @@ class DownloaderDialog(wx.Dialog):
 		
 		self.SetSizerAndFit(mainSizer)
 		self.CenterOnParent()
+		
+		# Auto-fetch clipboard on open
+		wx.CallAfter(self.auto_fetch_url)
+
+	def auto_fetch_url(self):
+		text_obj = wx.TextDataObject()
+		if wx.TheClipboard.Open():
+			success = wx.TheClipboard.GetData(text_obj)
+			wx.TheClipboard.Close()
+			if success:
+				url = text_obj.GetText().strip()
+				if url.startswith("http"):
+					self.urlInput.SetValue(url)
+					import speech
+					speech.speak(_("URL automatically fetched from clipboard"))
+
+	def onPaste(self, event):
+		text_obj = wx.TextDataObject()
+		if wx.TheClipboard.Open():
+			if wx.TheClipboard.GetData(text_obj):
+				self.urlInput.SetValue(text_obj.GetText().strip())
+			wx.TheClipboard.Close()
 
 	def onDownload(self, event):
 		url = self.urlInput.GetValue().strip()
@@ -69,14 +99,15 @@ class DownloaderDialog(wx.Dialog):
 		if not url:
 			wx.MessageBox(_("Please enter a URL."), _("Error"), wx.OK | wx.ICON_ERROR)
 			return
-			
+		
+		# Start Sound
+		winsound.Beep(1000, 150)
 		self.pd = wx.ProgressDialog(_("Downloading"), _("Please wait, processing your request..."), parent=self, style=wx.PD_APP_MODAL | wx.PD_AUTO_HIDE)
 		self.pd.Pulse()
 		self.downloadBtn.Disable()
 		threading.Thread(target=self.run_engine, args=(url, fmt), daemon=True).start()
 
 	def run_engine(self, url, fmt):
-		# Note: Ensure yt-dlp.exe and ffmpeg are in the addon folder
 		ytdlp_exe = os.path.join(self.addon_dir, "yt-dlp.exe")
 		ffmpeg_dir = self.addon_dir 
 		
@@ -94,7 +125,6 @@ class DownloaderDialog(wx.Dialog):
 		cmd.append(url)
 
 		try:
-			# CREATE_NO_WINDOW flag used for silent background process
 			proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, creationflags=0x08000000)
 			proc.communicate()
 			wx.CallAfter(self.finish_download, proc.returncode)
@@ -106,9 +136,12 @@ class DownloaderDialog(wx.Dialog):
 		if hasattr(self, 'pd'): self.pd.Destroy()
 		self.downloadBtn.Enable()
 		if code == 0:
+			winsound.Beep(440, 100)
+			winsound.Beep(880, 150)
 			wx.MessageBox(_("Download Completed Successfully!"), _("Finished"), wx.OK)
 			self.urlInput.Clear()
 		else:
+			winsound.Beep(200, 500)
 			wx.MessageBox(_("Download Failed. Check your URL and Internet."), _("Error"), wx.OK | wx.ICON_ERROR)
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
@@ -142,9 +175,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if os.path.exists(path): os.startfile(path)
 
 	def onHelp(self, event):
-		# Documentation link
-		doc_path = os.path.join(os.path.dirname(__file__), "..", "..", "doc", "en", "readme.html")
-		if os.path.exists(doc_path): os.startfile(doc_path)
+		lang = languageHandler.getLanguage()
+		doc_path = os.path.join(os.path.dirname(__file__), "..", "..", "doc", lang, "readme.html")
+		if not os.path.exists(doc_path):
+			doc_path = os.path.join(os.path.dirname(__file__), "..", "..", "doc", "en", "readme.html")
+		
+		if os.path.exists(doc_path):
+			os.startfile(doc_path)
 
 	@script(description=_("Opens the Media Downloader dialog."), gesture="kb:NVDA+shift+y")
 	def script_openDownloader(self, gesture):
