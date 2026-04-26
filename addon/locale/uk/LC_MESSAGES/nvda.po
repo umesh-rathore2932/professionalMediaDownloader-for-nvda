@@ -1,64 +1,108 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Professional Media Downloader 2.0\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
 
+# #-#-#-#-#  catalog.po  #-#-#-#-#
 # Main Menu Items
+#: addon\globalPlugins\professionalMediaDownloader\__init__.py:115
+#: addon\globalPlugins\professionalMediaDownloader\__init__.py:134
+#: buildVars.py:6
 msgid "Professional Media Downloader"
 msgstr "Професійний завантажувач медіа"
 
+#: addon\globalPlugins\professionalMediaDownloader\__init__.py:125
 msgid "&Open Downloader"
 msgstr "&Відкрити завантажувач"
 
+#: addon\globalPlugins\professionalMediaDownloader\__init__.py:128
 msgid "Open &Downloads Folder"
 msgstr "Відкрити &папку завантажень"
 
+#: addon\globalPlugins\professionalMediaDownloader\__init__.py:131
 msgid "&Help"
 msgstr "&Довідка"
 
+# #-#-#-#-#  catalog.po  #-#-#-#-#
 # Dialog Strings
+#: addon\globalPlugins\professionalMediaDownloader\__init__.py:21
 msgid "Professional Media Downloader v1.1"
-msgstr "Професійний завантажувач медіа v2.0"
+msgstr "Професійний медіа-завантажувач v1.1"
 
+#. URL Input
+#: addon\globalPlugins\professionalMediaDownloader\__init__.py:34
 msgid "&Enter URL:"
-msgstr "&Введіть URL-адресу:"
+msgstr "&Введіть URL:"
 
+#. Formats - Updated for Version 1.1 (Added aac, ogg, opus)
+#: addon\globalPlugins\professionalMediaDownloader\__init__.py:40
 msgid "Select &Format:"
 msgstr "Виберіть &формат:"
 
 msgid "&Paste from Clipboard"
 msgstr "&Вставити з буфера обміну"
 
+#: addon\globalPlugins\professionalMediaDownloader\__init__.py:49
 msgid "&Download"
 msgstr "&Завантажити"
 
+#: addon\globalPlugins\professionalMediaDownloader\__init__.py:56
 msgid "&Close"
 msgstr "&Закрити"
 
 # Status and Messages
 msgid "URL automatically fetched from clipboard"
-msgstr "URL-адресу автоматично отримано з буфера обміну"
+msgstr "URL автоматично отримано з буфера обміну"
 
+#: addon\globalPlugins\professionalMediaDownloader\__init__.py:73
 msgid "Downloading"
 msgstr "Завантаження"
 
+#: addon\globalPlugins\professionalMediaDownloader\__init__.py:73
 msgid "Please wait, processing your request..."
 msgstr "Будь ласка, зачекайте, ваш запит обробляється..."
 
+#: addon\globalPlugins\professionalMediaDownloader\__init__.py:109
 msgid "Download Completed Successfully!"
 msgstr "Завантаження успішно завершено!"
 
+#: addon\globalPlugins\professionalMediaDownloader\__init__.py:109
 msgid "Finished"
-msgstr "Завершено"
+msgstr "Готово"
 
+#: addon\globalPlugins\professionalMediaDownloader\__init__.py:70
+#: addon\globalPlugins\professionalMediaDownloader\__init__.py:112
 msgid "Error"
 msgstr "Помилка"
 
+#: addon\globalPlugins\professionalMediaDownloader\__init__.py:112
 msgid "Download Failed. Check your URL and Internet."
-msgstr "Помилка завантаження. Перевірте URL-адресу та підключення до Інтернету."
+msgstr "Помилка завантаження. Перевірте URL та підключення до Інтернету."
 
+#: addon\globalPlugins\professionalMediaDownloader\__init__.py:70
 msgid "Please enter a URL."
-msgstr "Будь ласка, введіть URL-адресу."
+msgstr "Будь ласка, введіть URL."
+
+#: addon\globalPlugins\professionalMediaDownloader\__init__.py:53
+msgid "&Open Downloads"
+msgstr "&Відкрити завантаження"
+
+#: addon\globalPlugins\professionalMediaDownloader\__init__.py:149
+msgid "Opens the Media Downloader dialog."
+msgstr "Відкриває діалог Медіа-завантажувача."
+
+#: buildVars.py:7
+msgid ""
+"A professional tool to download high-quality audio and video from over 1000 "
+"websites."
+msgstr ""
+"Професійний інструмент для завантаження високоякісного аудіо та відео з "
+"понад 1000 веб-сайтів."
