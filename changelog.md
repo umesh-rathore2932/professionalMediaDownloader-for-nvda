@@ -1,5 +1,6 @@
 # Changelog
-
+## version 2.1
+* ** now supports nvda2026.1 version:** the toolkit supports nvda2026.1 version!
 ## Version 2.0
 * **Auto-Clipboard Fetch:** The toolkit now automatically detects a URL from the clipboard upon opening and announces it via speech.
 * **Expanded Localization:** Full localization support added for Russian (ru) and Ukrainian (uk).
