@@ -83,8 +83,8 @@ class DownloaderDialog(wx.Dialog):
 				url = text_obj.GetText().strip()
 				if url.startswith("http"):
 					self.urlInput.SetValue(url)
-					import speech
-					speech.speak(_("URL automatically fetched from clipboard"))
+					import ui
+					ui.Message(_("URL automatically fetched from clipboard"))
 
 	def onPaste(self, event):
 		text_obj = wx.TextDataObject()
