@@ -1,4 +1,7 @@
 # Changelog
+## version 26.5.6
+* version changing: now plugin is updating based date or year or month like 26.5.6
+* now fully compatible and testible for nvda 2026.1!
 ## version 2.1
 * ** now supports nvda2026.1 version:** the toolkit supports nvda2026.1 version!
 ## Version 2.0
