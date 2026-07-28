@@ -1,4 +1,8 @@
 # Changelog
+## version 26.08.01
+* progress tracking: using ffprobe to calculate approx file size, downloading speed and total progress is showing.
+* cansil button adid: now shows  the cansil button wile your video and audio downloading. thanks for blind help project teem for this suggestion.
+* if you click cansil button the tool will bee ask to you cansil if you choose yes the video or audio wil bee cansil and all temp files will bee deleted. and if you click no, the file still bee downloading.
 ## version 26.5.8
 * spanish translation has been added.
 * new yt-dlp.exe.
